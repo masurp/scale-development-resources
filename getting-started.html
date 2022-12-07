@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Getting started with scale development</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="getting-started.html">Getting started</a>
+</li>
+<li>
+  <a href="guidelines.html">Guidelines</a>
+</li>
+<li>
+  <a href="r-resources.html">R Resources</a>
+</li>
+<li>
+  <a href="literature.html">Literature</a>
+</li>
+<li>
+  <a href="https://github.com/masurp/scale-development-resources">Source code</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Getting started with scale development</h1>
+
+</div>
+
+
+<p>Developing a scale is a complex undertaking and often much more than
+just creating some ad-hoc items. Although each scale development project
+will be slightly different, we hereby offer 6 important steps that in
+one way or the other will be part of any scale development process.
+These steps are roughly based on Carpenter (2018), but extend her steps
+in various ways. They are meant to sensitize researchers for the
+complexity of scale development and the important steps that should be
+included ranging from the initial theory work to cognitive pre-testing
+and validation with experts to the comprehensive empirical validation
+across several studies.</p>
+<p><br><br></p>
+<div id="important-steps-in-scale-development-and-validation"
+class="section level1">
+<h1>Important steps in scale development and validation</h1>
+<p><br></p>
+<div
+id="research-the-intended-meaning-and-breadth-of-the-theoretical-concept"
+class="section level2">
+<h2>1. Research the intended meaning and breadth of the theoretical
+concept</h2>
+<ul>
+<li>Develop appropriate conceptual labels</li>
+<li>Create conceptual definitions</li>
+<li>Identify potential dimensions and items based on theory and existing
+research</li>
+<li>Identify concepts that are similar (convergent validity), different
+(discriminant validity), or should be predictable by the new concept
+(criterion validity)</li>
+<li>Develop hypotheses related to how the new concepts relates to other
+concepts (validity)</li>
+</ul>
+</div>
+<div id="item-development-process" class="section level2">
+<h2>2. Item development process</h2>
+<ul>
+<li>Develop a large item pool that aligns with the defined concept and
+its subdimensions</li>
+<li>Consider the item’s difficulty to adequately cover the latent
+concept’s range</li>
+<li>If necessary, conduct in-depth qualitative research to generate
+dimensions and items</li>
+</ul>
+</div>
+<div id="feedback-and-adjustments" class="section level2">
+<h2>3. Feedback and adjustments</h2>
+<ul>
+<li>Expert feedback</li>
+<li>Formative evaluation (incl. cognitive interviews with the target
+popilation or smaller pilot tests) to evaluate item wording, item
+validity, questionnaire design, and model stcture</li>
+<li>Reading level assessment (particularly important for different age
+groups)</li>
+<li>Decide on a final item pool to be validated in empirical
+studies</li>
+</ul>
+</div>
+<div
+id="first-empirical-exploration-or-validation-of-the-factorial-structure"
+class="section level2">
+<h2>4. First empirical exploration or validation of the factorial
+structure</h2>
+<div id="questionnaire-and-study-design" class="section level3">
+<h3>4.1. Questionnaire and study design</h3>
+<ul>
+<li>Determine sampling procedure (how many participants are needed;
+simulations and power analyses)</li>
+<li>Create questionnaire (incl. the developed item pool, but also
+variables that are important for the validity analyses - see point 1,
+socio-demographics, etc.)</li>
+<li>Pretest the questionnaire to assess length (important given the
+oftentimes unusual length of the item pool)</li>
+<li>Collect data</li>
+</ul>
+</div>
+<div id="descriptive-analyses" class="section level3">
+<h3>4.2. Descriptive analyses</h3>
+<ul>
+<li>Examine data quality (what about missing, quality checks)</li>
+<li>Check psychometric properties of all items (means, standard
+deviations, are they any that do not discriminate between peopole =
+saturation)</li>
+</ul>
+</div>
+<div
+id="a-exploratory-factor-analysis-if-there-are-no-assumptions-about-the-dimensionality"
+class="section level3">
+<h3>4.3A: Exploratory factor analysis (if there are no assumptions about
+the dimensionality)</h3>
+<ul>
+<li><p>Verify the factorability of the data</p>
+<ul>
+<li>Bartlett’s Test of Sphericity (≤.05)</li>
+<li>Kaiser-Meyer-Olkin test of sampling adequacy (≥.60)</li>
+<li>Inspect correlation matrix (≥.30)</li>
+</ul></li>
+<li><p>Conduct Common Factor Analysis</p></li>
+<li><p>Select factor extraction method</p>
+<ul>
+<li>Principal Factors Analysis (not principal component analysis)</li>
+<li>Maximum Likelihood</li>
+</ul></li>
+<li><p>Determine number of factors</p>
+<ul>
+<li>Theoretical convergence and parsimony</li>
+<li>Scree test</li>
+<li>Parallel Analysis (PA)</li>
+<li>Minimum Average Partials (MAP)</li>
+</ul></li>
+<li><p>Rotate factors</p>
+<ul>
+<li>Oblique rotation (Direct Oblimin, Promax), not varimax which leads
+to uncorrelated factors</li>
+</ul></li>
+<li><p>Evaluate items based on a priori criteria</p>
+<ul>
+<li>Theoretical convergence</li>
+<li>Parsimony</li>
+<li>Weak loadings (≥.32)</li>
+<li>Cross loadings</li>
+<li>Inter-item correlations</li>
+<li>At least three-item factors</li>
+<li>Communalities of items (≥.40)</li>
+</ul></li>
+<li><p>Investigate reliability of all dimensions</p>
+<ul>
+<li>Cronbach’s Alpha (internal consistency)</li>
+<li>McDonald’s Omega (composite reliability)</li>
+<li>Average Variance Extracted (AVE)</li>
+</ul></li>
+</ul>
+</div>
+<div
+id="b-confirmatory-factor-analysis-if-there-are-assumptions-about-the-factorial-structure"
+class="section level3">
+<h3>4.3B: Confirmatory factor analysis (if there are assumptions about
+the factorial structure)</h3>
+<ul>
+<li><p>Test the multivariate normal distribution assumptions</p>
+<ul>
+<li>Mardia test</li>
+</ul></li>
+<li><p>Specify the theoretically assumed model</p>
+<ul>
+<li>Which items belong to which dimension?</li>
+<li>Are there higher-order factors (e.g., second-order factor model,
+bi-factor model…)</li>
+</ul></li>
+<li><p>Test the model using confirmatory factor analyses</p>
+<ul>
+<li>Evaluate model fit (Chi-Square test, CFI, TLI, RMSEA)</li>
+<li>Check convergence</li>
+<li>Check modification indices</li>
+</ul></li>
+<li><p>Evaluate items based on a priori criteria</p>
+<ul>
+<li>Theoretical convergence</li>
+<li>Parsimony</li>
+<li>Weak loadings (≥.32)</li>
+<li>Cross loadings</li>
+</ul></li>
+</ul>
+</div>
+<div id="reduce-item-pool-based-on-analyses" class="section level3">
+<h3>4.4. Reduce item pool based on analyses</h3>
+<ul>
+<li>Whether exploratory or confirmatory, it may be necessary to reduce
+the item pool to arrive at a satisfactorily factor structure</li>
+<li>If the pool is reduced, rerun 4.3 or 4.4. until a satisfactory
+solution is found</li>
+</ul>
+</div>
+<div id="validity-analyses" class="section level3">
+<h3>4.5. Validity analyses</h3>
+<ul>
+<li>If relevant measures were collected, assess convergent,
+discriminant, and criterion valditiy</li>
+<li>Complexity of these analyses depends on the concept of interest</li>
+</ul>
+</div>
+</div>
+<div id="re-validation-of-the-factorial-structure-and-validity-analyses"
+class="section level2">
+<h2>5. Re-validation of the factorial structure and validity
+analyses</h2>
+<div id="questionnaire-and-study-design-1" class="section level3">
+<h3>5.1. Questionnaire and study design</h3>
+<ul>
+<li>Determine sampling procedure (how many participants are needed;
+simulations and power analyses); but in this step, we often want a
+representative sample for the target population</li>
+<li>Create questionnaire (incl. the refined item pool from point 4, but
+also variables that are important for the validity analyses - see point
+1, socio-demographics, etc.)</li>
+<li>Collect data</li>
+</ul>
+</div>
+<div id="descriptive-analyses-1" class="section level3">
+<h3>5.2. Descriptive analyses</h3>
+<ul>
+<li>Examine data quality (what about missing, quality checks)</li>
+<li>Check psychometric properties of all items (means, standard
+deviations, are they any that do not discriminate between peopole =
+saturation)</li>
+</ul>
+</div>
+<div
+id="retesting-the-factorial-structure-using-confirmatory-factor-analyses"
+class="section level3">
+<h3>5.3. Retesting the factorial structure using confirmatory factor
+analyses</h3>
+<ul>
+<li><p>Test the multivariate normal distribution assumptions</p>
+<ul>
+<li>Mardia test</li>
+</ul></li>
+<li><p>Specify the theoretically assumed model</p>
+<ul>
+<li>Specify the same model that was the final result from point 4</li>
+</ul></li>
+<li><p>Test the model</p>
+<ul>
+<li>Evaluate model fit (Chi-Square test, CFI, TLI, RMSEA)</li>
+<li>Check convergence</li>
+</ul></li>
+<li><p>Evaluate items based on a priori criteria</p>
+<ul>
+<li>Theoretical convergence</li>
+<li>Parsimony</li>
+<li>Weak loadings (≥.32)</li>
+<li>Cross loadings</li>
+</ul></li>
+</ul>
+</div>
+<div id="validity-analyses-1" class="section level3">
+<h3>5.4. Validity analyses</h3>
+<ul>
+<li>If relevant measures were collected, assess convergent,
+discriminant, and criterion valditiy</li>
+<li>Complexity of these analyses depends on the concept of interest</li>
+</ul>
+</div>
+</div>
+<div id="report-the-results-in-a-transparent-and-comprehensive-manner"
+class="section level2">
+<h2>6. Report the results in a transparent and comprehensive manner</h2>
+<div id="in-depth-theoretical-rationale" class="section level3">
+<h3>6.1. In-depth theoretical rationale</h3>
+<ul>
+<li>Scale and subscale naming logic</li>
+<li>Conceptual definitions</li>
+<li>Theory and previous research</li>
+</ul>
+</div>
+<div
+id="report-on-all-pretesting-expert-feedback-cognitive-and-formative-evaluations"
+class="section level3">
+<h3>6.2. Report on all pretesting, expert feedback, cognitive and
+formative evaluations</h3>
+<ul>
+<li>Short summarizes of the major findings and how it affected the item
+development process</li>
+<li>Requires reflexive writing, similar to qualitative research</li>
+</ul>
+</div>
+<div id="descripve-methods-of-validation-studies"
+class="section level3">
+<h3>6.3. Descripve methods of validation studies</h3>
+<ul>
+<li><p>Sample size logic (power, convergence considerations)</p></li>
+<li><p>Depending on method (EFA vs. CFA)</p>
+<ul>
+<li>EFA: methods for determining factor numbers, Bartlett’s test of
+sphericity, Kaiser-Meyer-Olkin test of sampling adequacy results, factor
+extraction method, rotational method, strategies for deciding on items,
+eigenvalues for all factors, pattern matrix, computer program package,
+communalities for each variable, descriptive statistics, subscale
+reliabilities, and percentage of variance accounted for by each
+factor…</li>
+<li>CFA: describe specified model, Mardia’s test, model fit indices (at
+least Chi-square, CFI, TLI, RMSEA), report factor loadings, modification
+indices (if necessary) and how it lead to changes in the factor
+structure…</li>
+</ul></li>
+<li><p>Validity analyses</p>
+<ul>
+<li>Test relevant hypotheses</li>
+</ul></li>
+</ul>
+</div>
+<div id="summarize-and-discuss-main-results" class="section level3">
+<h3>6.4. Summarize and discuss main results</h3>
+<ul>
+<li>Comprehensive discussion of the process and the results</li>
+<li>Comprehensive discussion of strengths and weaknesses of the new
+instrument/scale</li>
+<li>How can the scale be used?</li>
+<li>Future perspectives</li>
+</ul>
+<p><br><br></p>
+</div>
+</div>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<ul>
+<li>Carpenter, S. (2018). Ten Steps in Scale Development and Reporting:
+A Guide for Researchers. Communication Methods &amp; Measures, 12(1),
+25-33. <a
+href="https://doi.org/10.1080/19312458.2017.1396583">https://doi.org/10.1080/19312458.2017.1396583</a></li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4,h5",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

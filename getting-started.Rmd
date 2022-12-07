@@ -1,0 +1,211 @@
+---
+title: "Getting started with scale development"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 5
+    df_print: paged
+---
+
+
+Developing a scale is a complex undertaking and often much more than just creating some ad-hoc items. Although each scale development project will be slightly different, we hereby offer 6 important steps that in one way or the other will be part of any scale development process. These steps are roughly based on Carpenter (2018), but extend her steps in various ways. They are meant to sensitize researchers for the complexity of scale development and the important steps that should be included ranging from the initial theory work to cognitive pre-testing and validation with experts to the comprehensive empirical validation across several studies. 
+
+<br><br>
+
+# Important steps in scale development and validation
+
+<br>
+
+## 1. Research the intended meaning and breadth of the theoretical concept
+
+- Develop appropriate conceptual labels
+- Create conceptual definitions
+- Identify potential dimensions and items based on theory and existing research
+- Identify concepts that are similar (convergent validity), different (discriminant validity), or should be predictable by the new concept (criterion validity)
+- Develop hypotheses related to how the new concepts relates to other concepts (validity)
+
+## 2. Item development process
+    
+- Develop a large item pool that aligns with the defined concept and its subdimensions
+- Consider the item's difficulty to adequately cover the latent concept's range
+- If necessary, conduct in-depth qualitative research to generate dimensions and items
+
+## 3. Feedback and adjustments 
+
+- Expert feedback
+- Formative evaluation (incl. cognitive interviews with the target popilation or smaller pilot tests) to evaluate item wording, item validity, questionnaire design, and model stcture
+- Reading level assessment (particularly important for different age groups)
+- Decide on a final item pool to be validated in empirical studies
+    
+## 4. First empirical exploration or validation of the factorial structure
+
+### 4.1. Questionnaire and study design
+  
+- Determine sampling procedure (how many participants are needed; simulations and power analyses)
+- Create questionnaire (incl. the developed item pool, but also variables that are important for the validity analyses - see point 1, socio-demographics, etc.)
+- Pretest the questionnaire to assess length (important given the oftentimes unusual length of the item pool) 
+- Collect data
+    
+### 4.2. Descriptive analyses
+  
+- Examine data quality (what about missing, quality checks)
+- Check psychometric properties of all items (means, standard deviations, are they any that do not discriminate between peopole = saturation)
+
+### 4.3A: Exploratory factor analysis (if there are no assumptions about the dimensionality)
+  
+- Verify the factorability of the data
+
+     - Bartlett’s Test of Sphericity (≤.05)
+     - Kaiser-Meyer-Olkin test of sampling adequacy (≥.60)
+     - Inspect correlation matrix (≥.30)
+   
+- Conduct Common Factor Analysis
+- Select factor extraction method
+    
+    - Principal Factors Analysis (not principal component analysis)
+    - Maximum Likelihood
+
+- Determine number of factors
+
+    - Theoretical convergence and parsimony
+    - Scree test
+    - Parallel Analysis (PA)
+    - Minimum Average Partials (MAP)
+    
+- Rotate factors
+
+    - Oblique rotation (Direct Oblimin, Promax), not varimax which leads to uncorrelated factors
+    
+- Evaluate items based on a priori criteria
+
+    - Theoretical convergence
+    - Parsimony
+    - Weak loadings (≥.32)
+    - Cross loadings
+    - Inter-item correlations
+    - At least three-item factors
+    - Communalities of items (≥.40)
+
+- Investigate reliability of all dimensions
+
+    - Cronbach's Alpha (internal consistency)
+    - McDonald's Omega (composite reliability)
+    - Average Variance Extracted (AVE)
+    
+### 4.3B: Confirmatory factor analysis (if there are assumptions about the factorial structure)
+
+- Test the multivariate normal distribution assumptions
+
+    - Mardia test
+
+- Specify the theoretically assumed model
+
+    - Which items belong to which dimension?
+    - Are there higher-order factors (e.g., second-order factor model, bi-factor model...)
+
+- Test the model using confirmatory factor analyses
+
+    - Evaluate model fit (Chi-Square test, CFI, TLI, RMSEA)
+    - Check convergence
+    - Check modification indices
+
+- Evaluate items based on a priori criteria
+
+    - Theoretical convergence
+    - Parsimony
+    - Weak loadings (≥.32)
+    - Cross loadings
+
+
+### 4.4. Reduce item pool based on analyses
+
+- Whether exploratory or confirmatory, it may be necessary to reduce the item pool to arrive at a satisfactorily factor structure
+- If the pool is reduced, rerun 4.3 or 4.4. until a satisfactory solution is found
+
+### 4.5. Validity analyses
+
+- If relevant measures were collected, assess convergent, discriminant, and criterion valditiy 
+- Complexity of these analyses depends on the concept of interest
+
+
+## 5. Re-validation of the factorial structure and validity analyses
+
+### 5.1. Questionnaire and study design
+  
+- Determine sampling procedure (how many participants are needed; simulations and power analyses); but in this step, we often want a representative sample for the target population
+- Create questionnaire (incl. the refined item pool from point 4, but also variables that are important for the validity analyses - see point 1, socio-demographics, etc.)
+- Collect data
+    
+### 5.2. Descriptive analyses
+  
+- Examine data quality (what about missing, quality checks)
+- Check psychometric properties of all items (means, standard deviations, are they any that do not discriminate between peopole = saturation)
+
+### 5.3. Retesting the factorial structure using confirmatory factor analyses
+
+- Test the multivariate normal distribution assumptions
+
+    - Mardia test
+
+- Specify the theoretically assumed model
+
+    - Specify the same model that was the final result from point 4
+
+- Test the model 
+
+    - Evaluate model fit (Chi-Square test, CFI, TLI, RMSEA)
+    - Check convergence
+
+- Evaluate items based on a priori criteria
+
+    - Theoretical convergence
+    - Parsimony
+    - Weak loadings (≥.32)
+    - Cross loadings
+
+### 5.4. Validity analyses
+
+- If relevant measures were collected, assess convergent, discriminant, and criterion valditiy
+- Complexity of these analyses depends on the concept of interest
+
+
+## 6. Report the results in a transparent and comprehensive manner
+
+### 6.1. In-depth theoretical rationale
+
+- Scale and subscale naming logic
+- Conceptual definitions
+- Theory and previous research
+
+### 6.2. Report on all pretesting, expert feedback, cognitive and formative evaluations
+
+- Short summarizes of the major findings and how it affected the item development process
+- Requires reflexive writing, similar to qualitative research
+
+### 6.3. Descripve methods of validation studies
+
+- Sample size logic (power, convergence considerations)
+- Depending on method (EFA vs. CFA)
+
+    - EFA: methods for determining factor numbers, Bartlett’s test of sphericity, Kaiser-Meyer-Olkin test of sampling adequacy results, factor extraction method, rotational method, strategies for deciding on items, eigenvalues for all factors, pattern matrix, computer program package, communalities for each variable, descriptive statistics, subscale reliabilities, and percentage of variance accounted for by each factor...
+    - CFA: describe specified model, Mardia's test, model fit indices (at least Chi-square, CFI, TLI, RMSEA), report factor loadings, modification indices (if necessary) and how it lead to changes in the factor structure...
+      
+- Validity analyses
+
+    - Test relevant hypotheses
+      
+
+### 6.4. Summarize and discuss main results
+
+- Comprehensive discussion of the process and the results
+- Comprehensive discussion of strengths and weaknesses of the new instrument/scale
+- How can the scale be used?
+- Future perspectives 
+
+
+<br><br>
+
+# References
+
+- Carpenter, S. (2018). Ten Steps in Scale Development and Reporting: A Guide for Researchers. Communication Methods & Measures, 12(1), 25-33. [https://doi.org/10.1080/19312458.2017.1396583](https://doi.org/10.1080/19312458.2017.1396583)
