@@ -1,0 +1,62 @@
+---
+title: "R Resources"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 5
+    df_print: paged
+---
+
+Below, you'll find various links to packages and tutorials that should be helpful in getting started with scale validation in R. This involves exploratory and confirmatory factor analyses within the paradigm of the classical test theory and various models within the item response theory paradigm. 
+
+<br><br><br>
+
+## Classical Test Theory (CTT)
+
+<br><br>
+
+### Relevant packages
+
+| Package name | Full title | Author | Links |
+|----|------|----|-------|
+| psych | Procedures for Psychological, Psychometric, and Personality Research | William Revelle | [CRAN](https://cran.r-project.org/web/packages/psych/index.html) , [Website](https://personality-project.org/r/psych/) ,  [Documentation](https://cran.r-project.org/web/packages/psych/psych.pdf) , [github](https://github.com/cran/psych) |
+| lavaan | Latent variable analysis | Yves Rosseel | [CRAN](https://cran.r-project.org/web/packages/psych/index.html) , [Website](https://lavaan.ugent.be/) , [Documentation](https://cran.r-project.org/web/packages/lavaan/lavaan.pdf) | [github](https://github.com/yrosseel/lavaan) , [Google Group Community](https://groups.google.com/d/forum/lavaan) |
+
+<br><br>
+
+### R Tutorials
+
+| Tutorial | Video tutorial |  Core packages / functions | Author |
+|----|---|---|---|
+| [Confirmatory Factor Analysis](tutorials/R_test-theory_1_cfa.md) | [CFA in R](https://www.youtube.com/watch?v=uKlagNgC-GY) | [psych](http://personality-project.org/r/psych/psych-manual.pdf): describe, mardia; [lavaan](https://lavaan.ugent.be/): cfa, fitMeasures, modindices; [semTools](https://cran.r-project.org/web/packages/semTools/semTools.pdf): reliability | Philipp Masur |
+| [Exploratory Factor Analysis](tutorials/R_test-theory_2_efa.md) | [EFA in R](https://youtu.be/AXaBMDA34YM) | [psych](http://personality-project.org/r/psych/psych-manual.pdf): describe, mardia, fa.parallel, nfactors, fa, fa.diagram, omega | Philipp Masur |
+
+
+
+<br><br><br>
+
+## Item Response Theory (IRT)
+
+<br><br>
+
+### Relevant packages
+
+| Package name | Full title | Author | Links |
+|----|------|----|-------|
+| mirt | Multidimensional Item Response Theory | Phil Chalmers | [CRAN](https://cran.r-project.org/web/packages/mirt/index.html) , [Documentation](https://cran.r-project.org/web/packages/mirt/mirt.pdf) , [github](https://github.com/philchalmers/mirt) , [Google Group Community](https://groups.google.com/g/mirt-package?pli=1) |
+| eRm | Extended Rasch Modeling | Patrick Mair and colleagues | [CRAN](https://cran.r-project.org/package=eRm) , [Documentation](https://cran.r-project.org/web/packages/eRm/eRm.pdf) , [github](https://github.com/cran/eRm) |
+
+**Additional information:**
+
+- Choi & Asikalkan (2019) also discuss relevant packages in the [following article](https://doi.org/10.1080/15366367.2019.1586404)
+
+<br><br>
+
+### R Tutorials
+
+| Tutorial | Video tutorial |  Core packages / functions | Author |
+|----|---|---|---|
+| [Basics of IRT: 3PL, 2PL, & 1PL/Rasch models](https://github.com/ccs-amsterdam/r-course-material/blob/master/tutorials/R_test-theory_3_irt.md) |  | [mirt](https://cran.r-project.org/web/packages/mirt/mirt.pdf): mirt; [ggmirt](https://github.com/masurp/ggmirt): various | Philipp Masur |
+| [Graded Response Model](https://github.com/ccs-amsterdam/r-course-material/blob/master/tutorials/R_test-theory_3_irt_graded.md) | | [mirt](https://cran.r-project.org/web/packages/mirt/mirt.pdf): mirt; lavaan: cfa, standardizedsolution; [ggmirt](https://github.com/masurp/ggmirt: various| Philipp Masur | 
+

@@ -6,6 +6,14 @@ output: github_document
 
 On this page, we aim to collect resources related to scale development and validation (incl. overall guidelines, literature, tutorials, R scripts, etc.). The goal is to organize relevant information and resources in a easy-to-access type of way. You can find all resources below, but you can also check out the related website, which provides them in a more organized type of way.
 
+# Getting started
+
+
+
+
+
+# General guidelines
+
 
 
 
@@ -62,6 +70,8 @@ Below, you'll find various links to packages and tutorials that should be helpfu
 ## Overall scale Development and Validation
 
 - Carpenter, S. (2018). Ten Steps in Scale Development and Reporting: A Guide for Researchers. Communication Methods & Measures, 12(1), 25-33. [https://doi.org/10.1080/19312458.2017.1396583](https://doi.org/10.1080/19312458.2017.1396583)
+- Fabrigar, L. R., Wegener, D. T., MacCallum, R. C., & Strahan, E. J. (1999). Evaluating the use of exploratory factor analysis in psychological research. Psychological methods, 4(3), 272. https://doi.org/10.1037/1082-989X.4.3.272
+- Flake, J.K., Fried, E.I.. (2020). Measurement Schmeasurement: Questionable Measurement Practices and How to Avoid Them. Advances in Methods and Practices in Psychological Science, 3(4):456-465. https://doi.org/10.1177/2515245920952393
 - Morrison, J. T. (2009). Evaluating factor analysis decisions for scale design in communication research. Communication Methods and Measures, 3(4), 195-215. https://doi.org/10.1080/19312450903378917
 - Noar, S. M. (2003). The role of structural equation modeling in scale development. Structural equation modeling, 10(4), 622-647. https://doi.org/10.1207/S15328007SEM1004_8
 - Worthington, R. L., & Whittaker, T. A. (2006). Scale development research: A content analysis and recommendations for best practices. The counseling psychologist, 34(6), 806-838. https://doi.org/10.1177/0011000006288127

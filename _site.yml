@@ -1,0 +1,17 @@
+name: "scale-development-resources"
+output_dir: "."
+navbar:
+  title: "Home"
+  type: inverse
+  right:
+   - text: "Getting started"
+     href: getting-started.html
+   - text: "Guidelines"
+     href: guidelines.html
+   - text: "R Resources"
+     href: r-resources.html
+   - text: "Literature"
+     href: literature.html
+output:
+  html_document:
+     theme:  cosmo
