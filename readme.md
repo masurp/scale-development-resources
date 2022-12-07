@@ -1,12 +1,24 @@
 Scale Development and Validation - Resources and Tools
 ================
 
-On this page, we aim to collect resources related to scale development
-and validation (incl. overall guidelines, literature, tutorials, R
-scripts, etc.). The goal is to organize relevant information and
-resources in a easy-to-access type of way. You can find all resources
-below, but you can also check out the related website, which provides
-them in a more organized type of way.
+On this page, we aim to collect resources related to scale development and validation (incl. overall guidelines, literature, tutorials, R scripts, etc.). The goal is to organize relevant information and resources in a easy-to-access type of way. You can find all resources below, but you can also check out the [related website](https://masurp.github.io/scale-development-resources/index.html), which provides them in a more organized type of way.
+
+# Getting started
+
+Developing a scale is a complex undertaking and often much more than just creating some ad-hoc items. Although each scale development project will be slightly different, we hereby offer 6 important steps that in one way or the other will be part of any scale development process. These steps are roughly based on Carpenter (2018), but extend her steps in various ways. They are meant to sensitize researchers for the complexity of scale development and the important steps that should be included ranging from the initial theory work to cognitive pre-testing and validation with experts to the comprehensive empirical validation across several studies. 
+
+- [6 important steps in scale development](https://masurp.github.io/scale-development-resources/getting-started.html)
+
+
+
+# General reporting guidelines
+
+What should be reported in the measures section of a standard research paper? Most scholars provide example items, some descriptive analyses (e.g., mean and standard deviation), and Cronbach's alpha as a measure of reliability. We argue that this is not sufficient and schoalrs should provide more in-depth analyses of the measures' factorial validity. The following page includes reporting guidelines and examples. 
+
+- [Reporting guidelines](https://masurp.github.io/scale-development-resources/guidelines.html)
+
+
+
 
 <br><br>
 
