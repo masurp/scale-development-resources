@@ -12,6 +12,8 @@ navbar:
      href: r-resources.html
    - text: "Literature"
      href: literature.html
+   - text: "Source code"
+     href: https://github.com/masurp/scale-development-resources
 output:
   html_document:
      theme:  cosmo

@@ -1,6 +1,11 @@
 ---
 title: "Literature"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 5
+    df_print: paged
 ---
 
 This page links to diverse literature relevant to scale development and validation. It will be continuesly updated and extended. 
