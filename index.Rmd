@@ -19,9 +19,9 @@ On this page, we aim to collect resources related to scale development and valid
 
 ## Overview
 
-- Getting Started: A first introduction to scale development and validation consisting of 10 important steps
+- [Getting Started](getting-started): A first introduction to scale development and validation consisting of 6 important steps
 
-- Guidelines: A list of aspects that are important to take into account and report in a scientific study (independent of whether a scale was developed or not)
+- [Guidelines](guidelines.html): A list of aspects that are important to take into account and report in a scientific study (independent of whether a scale was developed or not)
 
 - [R Resources](r-resources.html): A collection of links to relevant packages and tutorials that are useful to conduct psychometric analyses, confirmatory and exploratory factor analyses, as well as alternative approaches such as item reponse theory
 

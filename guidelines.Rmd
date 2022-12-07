@@ -1,0 +1,12 @@
+---
+title: "Guidelines for Reporting"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 5
+    df_print: paged
+---
+
+
+- Coming soon

@@ -11,7 +11,7 @@
 
 
 
-<title>Scale Development and Validation - Resources and Tools</title>
+<title>Guidelines for Reporting</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,9 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -222,6 +227,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -229,6 +297,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -272,89 +350,19 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Scale Development and Validation -
-Resources and Tools</h1>
+<h1 class="title toc-ignore">Guidelines for Reporting</h1>
 
 </div>
 
 
-<div id="introduction-and-problem-statement" class="section level2">
-<h2>Introduction and problem statement</h2>
-<div style="margin: 5em;">
-<p><img src="img/dalle_prompt.png" width = 380 align="right" /></p>
-</div>
-<p>A pivotal aspect of empirical social science is the reliable and
-valid measurement of the concepts of interest. Before we can study the
-things that we are interested in (e.g., attitudes, emotions, opinions,
-behavior…), we must define the construct of interest and build
-instruments that measure it accurately. Scale development and validation
-is its own large research field and much advances have been made with
-regard to how we should go about developing and validating instruments
-and scales. Developing a proper scale is its own research project, often
-spanning several studies from initial item development through
-qualitative work, cognitive pretesting and formative evaluation by
-experts, pilot test, initial empirical studies to refine and reduce the
-item pool, to a final confirmation of the factorial structure based on a
-representative sample.</p>
-<p>Yet, the scholarly practice often looks quite different. A lot of the
-published studies either a) used “existing” scales, whose validity is
-often unknown, or b) developed adhoc-scales which are often
-comparatively short and specific to the purpose of the study. On top,
-these “existing” or adhoc-scales are not much scrutinized with regard to
-their reliability and validity. A short descriptive analysis of the
-resulting mean indices and Cronbach’s alpha are often the only aspects
-that are reported. Comprehensive descriptive analyses of individual
-items, correlations between them, confirmatory factor analyses, as well
-as psychometric properties such as composite reliability (McDonald’s
-omega), average variance extracted (AVE) and validity analysis
-(incl. convergent, discriminant, and criterion validity) are mostly
-missing.</p>
-</div>
-<div id="the-goal-of-this-repository" class="section level2">
-<h2>The goal of this repository</h2>
-<p>On this page, we aim to collect resources related to scale
-development and validation (incl. overall guidelines, literature,
-tutorials, R scripts, etc.) to improve the scholarly practices related
-to the reporting of measures, the development of instruments and scales,
-and the knowledge and awareness of challenges, problems and issues. The
-goal is to organize relevant information and resources in an
-easy-to-access type of way.</p>
-</div>
-<div id="overview" class="section level2">
-<h2>Overview</h2>
 <ul>
-<li><p><a href="getting-started">Getting Started</a>: A first
-introduction to scale development and validation consisting of 6
-important steps</p></li>
-<li><p><a href="guidelines.html">Guidelines</a>: A list of aspects that
-are important to take into account and report in a scientific study
-(independent of whether a scale was developed or not)</p></li>
-<li><p><a href="r-resources.html">R Resources</a>: A collection of links
-to relevant packages and tutorials that are useful to conduct
-psychometric analyses, confirmatory and exploratory factor analyses, as
-well as alternative approaches such as item reponse theory</p></li>
-<li><p><a href="literature.html">Literature</a>: A growing list of
-relevant articles and books on various topics related to scale
-development and validation</p></li>
+<li>Coming soon</li>
 </ul>
-<p>We hope this repository will help interested scholars to improve
-their reporting of measures and learn more about the complex task of
-developing proper scales and measures.</p>
-<br><br><br>
-<p>
-<i>Note: The image was generated using DALL-E with the prompt “Item and
-Scale development and validation, 3d render, digital art”</i>
-</p>
-<br><br>
-<hr>
-<p style="margin-left: auto; margin-right: 0;">
-This repository is published under the following <a
-href="https://github.com/masurp/scale-development-resources/blob/main/LICENSE">license</a>.
-</p>
+
+
+
 </div>
-
-
-
+</div>
 
 </div>
 
@@ -387,6 +395,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4,h5",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
