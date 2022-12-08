@@ -51,9 +51,11 @@ paradigm.
 #### Relevant packages
 
 | Package name | Full title                            | Author                      | Links                                                                                                                                                                                                                                                                |
-|--------------|---------------------------------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| mirt         | Multidimensional Item Response Theory | Phil Chalmers               | [CRAN](https://cran.r-project.org/web/packages/mirt/index.html) , [Documentation](https://cran.r-project.org/web/packages/mirt/mirt.pdf) , [github](https://github.com/philchalmers/mirt) , [Google Group Community](https://groups.google.com/g/mirt-package?pli=1) |
-| eRm          | Extended Rasch Modeling               | Patrick Mair and colleagues | [CRAN](https://cran.r-project.org/package=eRm) , [Documentation](https://cran.r-project.org/web/packages/eRm/eRm.pdf) , [github](https://github.com/cran/eRm)                                                                                                        |
+| Package name | Full title | Author | Links |
+|----|------|----|-------|
+| mirt | Multidimensional Item Response Theory | Phil Chalmers | [CRAN](https://cran.r-project.org/web/packages/mirt/index.html) , [Documentation](https://cran.r-project.org/web/packages/mirt/mirt.pdf) , [github](https://github.com/philchalmers/mirt) , [Google Group Community](https://groups.google.com/g/mirt-package?pli=1) |
+| eRm | Extended Rasch Modeling | Patrick Mair and colleagues | [CRAN](https://cran.r-project.org/package=eRm) , [Documentation](https://cran.r-project.org/web/packages/eRm/eRm.pdf) , [github](https://github.com/cran/eRm) |
+| ggmirt | Extentions of `mirt` to create publication-ready figures | Philipp Masur | [github](https://github.com/masurp/ggmirt) |
 
 **Additional information:**
 
