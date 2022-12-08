@@ -4,7 +4,7 @@ output: github_document
 ---
 
 
-On this page, we aim to collect resources related to scale development and validation (incl. overall guidelines, literature, tutorials, R scripts, etc.). The goal is to organize relevant information and resources in a easy-to-access type of way. You can find all resources below, but you can also check out the [related website](https://masurp.github.io/scale-development-resources/index.html), which provides them in a more organized type of way.
+<img src="img/dalle_prompt.png" width = 300 align="right" style="margin-left: 2em; margin-bottom: 2em;"/>On this page, we aim to collect resources related to scale development and validation (incl. overall guidelines, literature, tutorials, R scripts, etc.). The goal is to organize relevant information and resources in a easy-to-access type of way. You can find all resources below, but you can also check out the [related website](https://masurp.github.io/scale-development-resources/index.html), which provides them in a more organized type of way.
 
 # Getting started
 
